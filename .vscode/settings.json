@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "editor.formatOnSave": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.egg-info": true
+  }
+}

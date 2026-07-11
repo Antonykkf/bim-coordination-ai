@@ -1,0 +1,14 @@
+---
+description: BIM coordination AI workflow context and conventions
+alwaysApply: true
+---
+
+# BIM Coordination AI
+
+This project is an AI-assisted BIM coordination triage service.
+
+- Keep coordination logic vendor-neutral; use connectors for ACC, BCF, Solibri, and Navisworks.
+- Treat AI output as advisory. Flag life-safety and uncertain cases for human review.
+- Prefer small, focused changes in `src/bim_coordination_ai/`.
+- Match existing Python style: typed models, async services, minimal abstractions.
+- Run tests with `python -m pytest` before finishing substantive changes.
