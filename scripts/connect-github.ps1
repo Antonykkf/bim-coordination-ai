@@ -25,11 +25,13 @@ if ($branch -eq "master") {
     $branch = "main"
 }
 
-$existing = git remote get-url origin 2>$null
-if ($LASTEXITCODE -eq 0) {
+$remotes = @(git remote)
+if ($remotes -contains "origin") {
+    $existing = git remote get-url origin
     Write-Host "Updating origin from $existing to $RemoteUrl"
     git remote set-url origin $RemoteUrl
 } else {
+    Write-Host "Adding origin remote: $RemoteUrl"
     git remote add origin $RemoteUrl
 }
 
